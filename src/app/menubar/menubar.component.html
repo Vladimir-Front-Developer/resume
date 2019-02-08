@@ -1,3 +1,29 @@
-<p>
-  menubar works!
-</p>
+<mat-toolbar color="primary">
+  <div class="leftIcon">
+      <!-- <img width="50" alt="Angular Logo" src="../assets/favicon.png"> -->
+      <span>My Application</span>
+  </div>
+  <div>
+    <button mat-button [matMenuTriggerFor]="menu1">material</button>
+    <mat-menu #menu1="matMenu">
+      <a mat-button href="https://material.angular.io" target="_blank">angular material</a><br>
+      <a mat-button href="https://material.io/design/color/#color-usage-palettes" target="_blank">design color</a>
+    </mat-menu>
+    <button mat-button [matMenuTriggerFor]="menu2">angular/cli</button>
+    <mat-menu #menu2="matMenu">
+      <button mat-menu-item>Item 3</button>
+      <button mat-menu-item>Item 4</button>
+    </mat-menu>
+    <button mat-button [matMenuTriggerFor]="menu3">Menu 3 </button>
+    <mat-menu #menu3="matMenu">
+      <button mat-menu-item>Item 5</button>
+      <button mat-menu-item>Item 6</button>
+    </mat-menu>
+    <button mat-button [matMenuTriggerFor]="menu4">Menu 4 </button>
+    <mat-menu #menu4="matMenu">
+      <button mat-menu-item>Item 7</button>
+      <button mat-menu-item>Item 8</button>
+    </mat-menu>
+  </div>
+  <span>Login</span>
+</mat-toolbar>
